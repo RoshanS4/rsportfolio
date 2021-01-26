@@ -15,6 +15,7 @@
             <li class="nav-item active">
               <a class="nav-link px-4" href="{% url 'blog_index' %}">Blog</a>
             </li>
+           
             {% if request.user.is_authenticated %}
               <li class="nav-item active">
               <a class="nav-link px-4" href="http://127.0.0.1:8000/admin/">Account</a>
@@ -33,6 +34,7 @@
                 </li>
                 {% endif %}
             </li>
+            
         </div>
         
     </div>
@@ -41,7 +43,52 @@
 
 <div class="container">
     {% block page_content %}{% endblock %}
+</br>
+</br>
+</br>
 </div>
+<div id="footer" style=" position: fixed; padding: 10px 10px 0px 10px; bottom: 0; width: 100%; height: 90px; background: #f8f9fa; ">
+  <div class="row">
+
+    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+    
+      <ul class="list-unstyled mb-0">
+        <li>
+          <a href="http://127.0.0.1:8000/" style="color: black; text-decoration: none;">Projects</a>
+        </li>
+      </br>
+        <li>
+          <a href="http://127.0.0.1:8000/blog/" style="color: black;text-decoration: none;">Blog</a>
+        </li>
+      </br>
+      {% if request.user.is_authenticated %}
+      <li>
+      <a href="http://127.0.0.1:8000/admin/" style="color: black;text-decoration: none;">Account</a>
+      </li>
+      <script>
+      document.getElementById("footer").style.height = 133;
+    </script>
+      {%endif%}
+      
+    </div>
+    <!--Grid column-->
+
+    <!--Grid column-->
+    
+    <!--Grid column-->
+  
+  <!--Grid row-->
+
+<!-- Grid container -->
+
+<!-- Copyright -->
+<div class="text-center p-3" style="background-color: secondary">
+ Repositories for these projects located on my
+  <a href="https://github.com/RoshanS4/" style="color:#007bff;text-decoration: none;">Github</a>
+</div>
+</div>
+</div> 
+
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
