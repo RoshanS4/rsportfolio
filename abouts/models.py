@@ -1,7 +1,10 @@
 from django.db import models
 
+# Create your models here.
 
-class Project(models.Model):
+
+
+class About(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField()
     technology = models.CharField(max_length=100)
@@ -13,5 +16,8 @@ class Project(models.Model):
     image_tag.short_description = 'Image'
     image_tag.allow_tags = True
 
-    def __str__(proj):
-        return '%s' % (proj.title)
+    def __str__(about):
+        return '%s' % (about.title)
+
+    class Meta:
+        verbose_name_plural = "About Me"

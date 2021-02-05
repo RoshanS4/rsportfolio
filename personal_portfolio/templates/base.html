@@ -15,7 +15,9 @@
             <li class="nav-item active">
               <a class="nav-link px-4" href="{% url 'blog_index' %}">Blog</a>
             </li>
-           
+            <li class="nav-item active">
+              <a class="nav-link px-4" href="{% url 'about_index' %}">About Me</a>
+            </li>
             {% if request.user.is_authenticated %}
               <li class="nav-item active">
               <a class="nav-link px-4" href="http://127.0.0.1:8000/admin/">Account</a>
@@ -47,7 +49,7 @@
 </br>
 </br>
 </div>
-<div id="footer" style=" position: fixed; padding: 10px 10px 0px 10px; bottom: 0; width: 100%; height: 90px; background: #f8f9fa; ">
+<div id="footer" style=" position: fixed; padding: 10px 15px 0px 10px; bottom: 0; width: 100%; height: 90px; background: #f8f9fa; ">
   <div class="row">
 
     <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
